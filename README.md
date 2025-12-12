@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Authentication Flow
 
-## Getting Started
+A modern, highly animated, and responsive authentication suite built with **Next.js 16**, **React 19**, and **Tailwind CSS v4**. This project demonstrates a seamless user experience for common authentication tasks, featuring smooth transitions and interactive UI elements.
 
-First, run the development server:
+## ✨ Features
+
+- **Comprehensive Auth Suite**: Includes fully functional UI for:
+  - **Login**: Secure access with email and password.
+  - **Sign Up**: New user registration with validation.
+  - **Forgot Password**: Request reset links.
+  - **Reset Password**: Securely update credentials.
+  - **OTP Verification**: Interactive 6-digit one-time password input.
+- **Dynamic Animations**: Powered by `framer-motion` for smooth page transitions and floating labels.
+- **Form Management**: Robust form handling and validation using `react-hook-form`.
+- **Modern UI**: Built with Shadcn-like components and tailored Tailwind CSS styles.
+- **Responsive Design**: Mobile-first approach ensuring perfect rendering on all devices.
+- **Floating Labels**: Interactive input fields that animate on focus.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Library**: [React 19](https://react.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Form Handling**: [React Hook Form](https://react-hook-form.com/)
+- **Icons**: FontAwesome (via CDN) & Lucide React
+- **Utilities**: `clsx`, `tailwind-merge`, `class-variance-authority`
+
+## 🚀 Getting Started
+
+Follow these steps to set up the project locally.
+
+### Prerequisites
+
+Ensure you have Node.js installed on your machine.
+
+### Installation
+
+1.  **Clone the repository**:
+
+    ```bash
+    git clone <repository-url>
+    cd authentication-flow
+    ```
+
+2.  **Install dependencies**:
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    ```
+
+3.  **Run the development server**:
+
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open the app to view it in the browser**:
+    Visit [http://localhost:3000](http://localhost:3000)
+
+## 📂 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+authentication-flow/
+├── app/
+│   ├── layout.tsx      # Main layout with FontAwesome CDN
+│   ├── page.tsx        # Core Authentication Suite component (Logic & UI)
+│   └── globals.css     # Global styles and Tailwind directives
+├── components/
+│   └── ui/             # Reusable UI components (Button, Card, Input, Separator)
+├── public/             # Static assets
+└── package.json        # Project dependencies and scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Design details
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Background**: Uses a high-quality abstract geometric background from Unsplash with a blurred overlay for depth.
+- **Transitions**: `AnimatePresence` handles the smooth switching between different auth views (e.g., sliding from Login to Sign Up).
+- **Inputs**: Custom `AnimatedInput` component manually implements the "Material Design" floating label effect using framer-motion.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🤝 Contributing
 
-## Learn More
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open-source and available under the [MIT License](LICENSE).
